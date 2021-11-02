@@ -14,7 +14,7 @@ output: html_document
 
 # Exercises and objectives
 
-1) Get acquainted with python learn some of the differences between it and R  
+1) Get acquainted with _Python_, and learn some of the differences between it and _R_  
 2) Estimate bias and variance based on a true underlying function  
 
 REMEMBER: In your report, make sure to include code that can reproduce the answers requested in the exercises below (__MAKE A KNITTED VERSION__)  
@@ -26,12 +26,17 @@ To make sure that _Python_ runs within _R Markdown_, make sure you have the _ret
 Also create a text file that is called _.Renviron_ (remember the dot) placed in the folder where your _RProj_ file is. It should have a single line: `RETICULATE_PYTHON=PATH` where `PATH` is the path to your _methods3_ conda environment. Use the commands below to find the paths:  
 
 ```{r}
-library(pacman)
-p_load(reticulate)
-use_python("C:/Users/Lenovo/miniconda3")
+library(reticulate)
 print(conda_list())
-use_virtualenv("methods3")
 ```
+
+To update your environment based on the updated `methods3_environment.yml` file, go to your _week_06_ folder and run the following from a _bash_ interpreter (e.g. _terminal_):  
+
+```{bash, eval=FALSE}
+conda env create --force -f methods3_environment.yml
+```
+
+The `--force` flag allows for overwriting  
 
 ## Good to know about _Python_ (in no particular order)
 
